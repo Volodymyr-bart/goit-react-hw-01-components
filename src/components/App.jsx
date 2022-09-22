@@ -7,9 +7,9 @@ import friends from '../components/Friends/friends.json';
 export const App = () => {
   return (
     <div>
-      {/* <Profile /> */}
+      <Profile />
       {/* <Statistics /> */}
-      <FriendList friends={friends} />
+      {/* <FriendList friends={friends} /> */}
     </div>
   );
 };
