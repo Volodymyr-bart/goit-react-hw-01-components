@@ -36,9 +36,12 @@ export const Location = styled.p`
 
 export const CardBottom = styled.ul`
   display: flex;
+  border: solid 2px;
 `;
 export const BlockInfo = styled.li`
   display: flex;
+  border: solid 1px;
+  width: 100%;
 
   flex-direction: column;
   background-color: #d4d5d8;

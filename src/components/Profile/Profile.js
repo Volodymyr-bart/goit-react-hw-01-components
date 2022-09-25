@@ -10,31 +10,37 @@ import {
   InfoName,
   InfoValue,
 } from './Profile.styled';
-export const Profile = () => {
+
+export const Profile = ({
+  user: {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  },
+}) => {
   return (
     <Container>
       <CardTop>
-        <Avatar
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-        />
-        <Name>Petra Marica</Name>
-        <Tag>@pmarica</Tag>
-        <Location>Salvador, Brasil</Location>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>{tag}</Tag>
+        <Location>{location}</Location>
       </CardTop>
 
       <CardBottom>
         <BlockInfo>
           <InfoName>Followers</InfoName>
-          <InfoValue>1000</InfoValue>
+          <InfoValue>{followers}</InfoValue>
         </BlockInfo>
         <BlockInfo>
           <InfoName>Views</InfoName>
-          <InfoValue>2000</InfoValue>
+          <InfoValue>{views}</InfoValue>
         </BlockInfo>
         <BlockInfo>
           <InfoName>Likes</InfoName>
-          <InfoValue>3000</InfoValue>
+          <InfoValue>{likes}</InfoValue>
         </BlockInfo>
       </CardBottom>
     </Container>

@@ -1,4 +1,5 @@
 import { Profile } from './Profile/Profile';
+import user from './Profile/user.json';
 // import { Statistics } from './Statistics/Statistics';
 // import { FriendList } from './Friends/FriendList';
 // import { FriendListItem } from './Friends/FriendListItem';
@@ -7,7 +8,7 @@ import { Profile } from './Profile/Profile';
 export const App = () => {
   return (
     <div>
-      <Profile />
+      <Profile user={user} />
       {/* <Statistics /> */}
       {/* <FriendList friends={friends} /> */}
     </div>
