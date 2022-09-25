@@ -30,7 +30,7 @@ export const Avatar = styled.img`
   height: 100px;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 50px;
 `;
 
 export const Name = styled.p`

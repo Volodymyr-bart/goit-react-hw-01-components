@@ -1,26 +1,25 @@
-export const Statistics = () => {
+// import PropTypes from 'prop-types';
+import {
+  StatSection,
+  StatTitle,
+  StatList,
+  StatListItem,
+  StatValue,
+} from './Statistics.styled';
+export const Statistics = ({ title, stats }) => {
+  // console.log(title);
+  // console.log(stats);
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
-
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">.docx</span>
-          <span class="percentage">4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
-      </ul>
-    </section>
+    <StatSection>
+      <StatTitle>{title}</StatTitle>
+      <StatList>
+        {stats.map(({ id, label, percentage }) => (
+          <StatListItem key={id}>
+            <span>{label}</span>
+            <StatValue>{percentage}%</StatValue>
+          </StatListItem>
+        ))}
+      </StatList>
+    </StatSection>
   );
 };
