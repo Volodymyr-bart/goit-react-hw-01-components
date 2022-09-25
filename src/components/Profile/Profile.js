@@ -1,30 +1,42 @@
+import {
+  Container,
+  CardTop,
+  CardBottom,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  BlockInfo,
+  InfoName,
+  InfoValue,
+} from './Profile.styled';
 export const Profile = () => {
   return (
-    <div>
-      <div>
-        <img
+    <Container>
+      <CardTop>
+        <Avatar
           src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
           alt="User avatar"
         />
-        <p>Petra Marica</p>
-        <p>@pmarica</p>
-        <p>Salvador, Brasil</p>
-      </div>
+        <Name>Petra Marica</Name>
+        <Tag>@pmarica</Tag>
+        <Location>Salvador, Brasil</Location>
+      </CardTop>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>1000</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>2000</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>3000</span>
-        </li>
-      </ul>
-    </div>
+      <CardBottom>
+        <BlockInfo>
+          <InfoName>Followers</InfoName>
+          <InfoValue>1000</InfoValue>
+        </BlockInfo>
+        <BlockInfo>
+          <InfoName>Views</InfoName>
+          <InfoValue>2000</InfoValue>
+        </BlockInfo>
+        <BlockInfo>
+          <InfoName>Likes</InfoName>
+          <InfoValue>3000</InfoValue>
+        </BlockInfo>
+      </CardBottom>
+    </Container>
   );
 };
