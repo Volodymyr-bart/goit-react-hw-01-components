@@ -13,7 +13,7 @@ export const App = () => {
     <div>
       <Profile user={user} />
       <Statistics title="Upload stats" stats={data} />
-      {/* <Statistics stats={Statistics} /> */}
+      <Statistics stats={data} />
       {/* <FriendList friends={friends} /> */}
     </div>
   );

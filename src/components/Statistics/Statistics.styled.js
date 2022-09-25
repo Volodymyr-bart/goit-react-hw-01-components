@@ -6,11 +6,13 @@ export const StatSection = styled.section`
   width: fit-content;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   gap: 10px;
 `;
 
-export const StatTitle = styled.h2``;
+export const StatTitle = styled.h2`
+  padding: 30px;
+`;
 
 export const StatList = styled.ul`
   display: flex;
