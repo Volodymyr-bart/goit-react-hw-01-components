@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding: 50px;
   width: fit-content;
   margin: 0 auto;
+  height: fit-content;
 `;
 
 export const CardTop = styled.div`
