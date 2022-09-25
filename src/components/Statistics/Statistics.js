@@ -11,7 +11,7 @@ export const Statistics = ({ title, stats }) => {
   // console.log(stats);
   return (
     <StatSection>
-      <StatTitle>{title}</StatTitle>
+      {title && <StatTitle>{title}</StatTitle>}
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <StatListItem key={id}>
