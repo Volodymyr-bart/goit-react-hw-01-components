@@ -1,26 +1,33 @@
-export const FriendListItem = ({ transaction: { type, amount, currency } }) => {
-  return (
-    <table class="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+import {
+  Table,
+  TableTitle,
+  TableTitleTr,
+  TableTitleTh,
+  TableBody,
+  TableBodyTr,
+  TableBodyTd,
+} from './TransactionHistory.styled';
 
-      <tbody>
-        <tr>
-          <td>{type}</td>
-          <td>{amount}</td>
-          <td>{currency}</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
-      </tbody>
-    </table>
+export const Transaction = ({ transactions }) => {
+  return (
+    <Table>
+      <TableTitle>
+        <TableTitleTr>
+          <TableTitleTh>Type</TableTitleTh>
+          <TableTitleTh>Amount</TableTitleTh>
+          <TableTitleTh>Currency</TableTitleTh>
+        </TableTitleTr>
+      </TableTitle>
+
+      <TableBody>
+        {transactions.map(({ id, type, amount, currency }) => (
+          <TableBodyTr key={id}>
+            <TableBodyTd>{type}</TableBodyTd>
+            <TableBodyTd>{amount}</TableBodyTd>
+            <TableBodyTd>{currency}</TableBodyTd>
+          </TableBodyTr>
+        ))}
+      </TableBody>
+    </Table>
   );
 };
