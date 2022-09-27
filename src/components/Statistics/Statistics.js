@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   StatSection,
   StatTitle,
@@ -7,8 +7,6 @@ import {
   StatValue,
 } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
-  // console.log(title);
-  // console.log(stats);
   return (
     <StatSection>
       {title && <StatTitle>{title}</StatTitle>}
@@ -22,4 +20,15 @@ export const Statistics = ({ title, stats }) => {
       </StatList>
     </StatSection>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   Table,
   TableTitle,
@@ -30,4 +31,15 @@ export const Transaction = ({ transactions }) => {
       </TableBody>
     </Table>
   );
+};
+
+Transaction.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
