@@ -14,13 +14,11 @@ import {
 } from './Profile.styled';
 
 export const Profile = ({
-  user: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
 }) => {
   return (
     <Container>
